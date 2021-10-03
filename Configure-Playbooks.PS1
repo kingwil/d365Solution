@@ -104,7 +104,7 @@ if(!(Get-AzureADServiceAppRoleAssignedTo -ObjectId $managedIdentity.PrincipalId 
         -ResourceId $appServicePrincipal.ObjectId
 }
 
-#### SECTION5: Assign the License Administrator Directory role to the User Assigned Managed Identity
+#### SECTION5: Assign the License Administrator Directory role to the App Registration
 Write-Host "Assigning License Administrator role" -ForegroundColor Yellow
 $directoryRole = Get-AzureADDirectoryRole | Where-Object DisplayName -eq "License Administrator"
 if (!($directoryRole)) {
